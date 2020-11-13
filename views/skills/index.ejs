@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express kills</title>
+</head>
+<body>
+    <h1>Skills</h1>
+    <ul>
+      <% mySkills.forEach(function(t) { %>
+        <li>
+          <a href="/skills/<%= t.id %>"><%= t.skill %></a>
+          - 
+          <%= t.done ? 'done' : 'not done' %>
+          - 
+          level <%= t.level %>
+        </li>
+      <% }); %>
+    </ul>
+</body>
+</html>
