@@ -10,6 +10,7 @@
 <body>
     <h1>Skills</h1>
     <a href="/skills/new">Add Skills</a>
+    <a href="/skills/">Eddit Skills</a>
     <ul>
       <% mySkills.forEach(function(t) { %>
         <li>
@@ -17,6 +18,14 @@
             class="delete-form" method="POST">
             <button type="submit">X</button>
           </form>
+
+
+          <form>
+            <input type="checkbox" name="skills" method="PUT" value="<%= t.id %>" 
+            <%= t.done ? "checked" : ''  %> >
+            
+          </form>
+
 
           <a href="/skills/<%= t.id %>"><%= t.skill %></a>
           - 
